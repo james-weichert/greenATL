@@ -1,0 +1,559 @@
+@font-face {
+    font-family: 'GillSansPro';
+    src: url('GillSans.woff2') format('woff2'),
+    url('GillSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: "Trebuchet MS", 'GillSansPro', "Source Sans Pro", Verdana, Sans-serif;
+
+
+}
+
+#containerForStuff {
+	margin-left: 10% !important;
+	margin-right: 10%  !important;
+
+	text-align: center;
+
+}
+
+img#greenLogo {
+	width: 50% !important;
+	display: block;
+	margin: 0 auto;
+
+}
+
+h2 {
+	font-size: 1.5em;
+	color: #3E8914;
+
+}
+
+a {
+	text-decoration: none;
+
+}
+			
+#toHome {
+	color: #3E8914;
+
+}
+			
+#toProjects {
+	color: #96E072;
+
+}
+			
+#toInvolved {
+	color: #3DA35D;
+			
+}
+			
+#toContact {
+	color: #134611;
+			
+}
+			
+#headerTableOne {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: 10vh;
+	width: 30%;
+	margin-left: 8vw;
+
+}
+
+#headerTableTwo {
+	position: absolute;
+	top: 0;
+	margin-top: 10vh;
+	width: 30%;
+	right: 0;
+	margin-right: 8vw;
+
+}
+
+tr {
+	width: 30%;
+			
+}
+			
+td {
+	width: 8%;
+			
+}
+
+#headerTableOne td {
+	text-align: left;
+			
+}
+			
+#headerTableTwo td {
+	text-align: right;
+		
+}
+
+#scrollFooter {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: -0.5vh;
+	width: 20%;
+	left: 50%;
+	margin-left: -10%;
+
+}
+
+#arrowDown {
+	width: 10vw;
+	display: block;
+	margin: 0 auto;
+	z-index: 99;
+
+}
+			
+#toBottom {
+	background-color: #AAAFFF;
+			
+}
+
+.noSelect {
+    user-drag: none; 
+	user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    outline-width: 0;
+
+} 
+
+.noSelect:focus{
+    outline: none;
+			
+}
+			
+body {
+    background-color: #FFF !important;
+    outline: none !important;
+
+    overflow-x: visible !important;
+
+    overflow-y: visible !important; 
+
+    width: 100vw;
+
+
+
+
+}
+			
+#arrowDown {
+    background-color: rgba(0,0,0,0) !important;
+    outline: none !important;
+	
+}
+
+.textContainer {
+	padding-left: 4% !important;
+	padding-right: 4% !important;
+			
+}
+
+h3 {
+	font-size: 1.5em;
+	color: #3DA35D;
+
+}
+			
+h4 {
+	font-size: 1.2em;
+	color: #3DA35D;
+
+}
+
+.colorText {
+	color: #134611;
+			
+}
+
+.projectPlaceholder {
+	width: 80%;
+			
+}
+		
+.projectPlaceholderTest {
+	width: 80%;
+			
+}
+			
+#projectTable td {
+	padding: 5% 0;
+			
+}
+
+#projectTableTest td {
+	padding: 5% 0;
+			
+}
+
+#skyline {
+	width: 100% !important;
+	opacity: 0.4;
+	margin-left: -2%;
+	margin-bottom: -8% !important;
+
+	overflow-x: hidden !important;
+			
+}
+
+
+			/*------------------------*/
+
+
+#footerWebsite {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 45%;
+	margin-left: 5vw;
+	font-size: 0.6em;
+
+}
+
+#footerWebsite td {
+	text-align: left;
+			
+}
+
+#footerLinks {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-top: -10vh;
+	width: 45%;
+	margin-left: -20%;
+	font-size: 1em;
+
+}
+
+#footerLinks td {
+	text-align: center;
+			
+}
+
+#footerCopy {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 40%;
+	margin-right: 5vw;
+	font-size: 0.6em;
+
+}
+
+#footerCopy td {
+	text-align: right;
+			
+}
+
+#moveThisDown{
+	position: relative;
+			
+}
+
+.footerText {
+	color: #134611;
+	font-size: 1em;
+			
+}
+
+#moveThisDownTwo {
+	margin-top: 0vh;
+			
+}
+
+#projectTextTest {
+	position: relative;
+	z-index: -2;
+
+	-webkit-transition: opacity 2s ease-in-out;
+	-moz-transition: opacity 2s ease-in-out;
+	-o-transition: opacity 2s ease-in-out;
+	-ms-transition: opacity 2s ease-in-out;
+	transition: opacity 2s ease-in-out;
+	
+	opacity: 0;
+
+}	
+
+body {
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+
+	opacity: 0;
+			
+}
+
+a { 
+	cursor: pointer; cursor: hand; 
+
+}
+
+.projectPlaceholder { 
+	cursor: pointer; cursor: hand; 
+
+}
+
+.textForImage {
+	cursor: pointer; cursor: hand;
+	color: #FFF;
+	position: absolute;
+  	left: 0; 
+  	width: 100%;
+  	bottom: 0;
+  	top: 0;
+  	height: 12.5%;
+  	margin-top: auto;
+  	margin-bottom: auto;
+  	text-align: center;
+  	font-size: 0.75em;
+  	display:table-cell;
+
+}
+
+#divOne, #divTwo, #divThree, #divFour {
+	position: relative;
+
+}
+
+#divOne:hover #getThisHeight {
+  	opacity: 0.3;
+			
+}
+
+#getThisHeight {
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+			
+}
+
+#divTwo:hover #getThisHeightTwo {
+  	opacity: 0.3;
+			
+}
+
+#getThisHeightTwo {
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+			
+}
+
+#divThree:hover #getThisHeightThree {
+  	opacity: 0.3;
+			
+}
+
+#getThisHeightThree {
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+			
+}
+
+#divFour:hover #getThisHeightFour {
+  	opacity: 0.3;
+			
+}
+
+#getThisHeightFour {
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+
+}
+
+#theBeltline {
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	-ms-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+			
+}
+
+#Midtown {
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	-ms-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+			
+}
+
+#Buckhead {
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	-ms-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+			
+}
+
+#yourNeighborhood {
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	-ms-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+
+}
+
+#divOne:hover #theBeltline {
+  	color: #3E8914;
+			
+}
+			
+#divTwo:hover #Midtown {
+  	color: #3E8914;
+
+}
+			
+#divThree:hover #Buckhead {
+  	color: #3E8914;
+			
+}
+			
+#divFour:hover #yourNeighborhood {
+  	color: #3E8914;
+			
+}
+
+
+/*-----------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
+-----------------------------------------------------*/
+
+
+.socialTableTD img {
+	width: 10vw !important;
+		
+}
+		
+#socialTable {
+	border-spacing: 5vw 0vw;
+	margin-left: auto;
+	margin-right: auto;
+		
+}
+
+
+/*-----------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
+-----------------------------------------------------*/
+
+
+.parkLinks {
+	color: #3E8914;
+
+}
+
+.parkLinks:hover {
+	color: #3DA35D;
+
+}
+		
+.parkLinks:active {
+	color: #3E8914;
+
+}
+		
+.parkLinks:visited {
+	color: #3E8914;
+		
+}						
+
+#readMore { 
+	cursor: pointer; cursor: hand; 
+
+}
+
+#greenFact {
+	color: #3E8914;
+		
+}
+
+#carEmissions {
+	width: 100%;
+
+}
+		
+#greenTree {
+	width: 55%;
+		
+}
+
+#greenLeaf {
+	width: 60%;
+		
+}
+
+#video {
+	width: 100%;
+	height: 40vh;
+
+}
+
+
+/*-----------------------*/
+
+
+#goBack {
+	color: #96E072;
+	font-size: 1em;
+			
+}
+
+
+/*----------------------*/
+
+
+#snapLink {
+	width: 70%;
+
+}
+
+
+/*----------------------*/
+
+
+#trulyTheEntirePage {
+	overflow-x: hidden !important;
+	width: 100vw; 
+
+	overflow-y: visible !important;
+
+	overflow-x: hidden; 
+
+	-webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>greenATL</title>
+
+	<link rel="icon" type="image/x-icon" href="Assets/favicon.ico" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="gentle_anchors_1.2.6.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="desktopCSS.css"/>
+
+
+	<script type="text/javascript">
+	
+		var expanded = 0;
+		var scroll_pos = 0;
+
+		var isMobile = 0;
+
+	function startFunc () {
+
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+
+				isMobile = 1;
+
+				document.getElementById('skyline').src = "Assets/skyline4.png";
+
+				var oldlink = document.getElementsByTagName("link").item(0);
+
+    			var newlink = document.createElement("link");
+    			newlink.setAttribute("rel", "stylesheet");
+    			newlink.setAttribute("type", "text/css");
+    			newlink.setAttribute("href", "mobileCSS.css");
+
+    			document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+
+    			//-------------------
+
+    			removeStuff ();
+
+			} else {
+				isMobile = 0;
+			}
+
+			Gentle_Anchors.Setup('#top');
+
+			setTimeout(function () {
+				document.body.style.opacity = 1;
+			}, 500);
+		
+
+	}
+
+	function removeStuff () {
+
+		var deleteChild = document.getElementById("headerContainer");
+			document.getElementById("entirePage").removeChild(deleteChild);
+
+		var deleteChild = document.getElementById("footerLinks");
+			document.getElementById("moveThisDown").removeChild(deleteChild);
+
+		var deleteChild = document.getElementById("scrollFooter");
+			document.getElementById("entirePage").removeChild(deleteChild);		
+
+	}
+
+	function scrollOpacity () {
+			
+		if (isMobile == 0) {
+			scroll_pos = window.scrollY;
+
+			var setOpacity = 100 - (2 * scroll_pos);
+
+			document.getElementById('arrowDown').style.opacity = setOpacity;
+			document.getElementById('arrowDown').style.transition = "opacity 0.35s";
+		}	
+	}
+
+	function scrollToBottom () {
+		Gentle_Anchors.Setup('#aboutUs');
+	}
+	
+
+	function goToNextPage(a) {
+		document.body.style.opacity = 0;
+
+		setTimeout(function () {
+			if (a == 1) {
+				window.location.href = "projectOne.html";
+			} else if (a == 2) {
+				window.location.href = "projectTwo.html";
+			} else if (a == 3) {
+				window.location.href = "projectThree.html";
+			} else if (a == 4) {
+				window.location.href = "projectFour.html";
+			} else if (a == 5) {
+				window.location.href = "snapchat.html";
+			} else if (a == 6) {
+				window.location.href = "sources.html";
+			} else {
+				return;
+			}
+		}, 1750);
+	}
+
+	function goToSources () {
+		document.body.style.opacity = 0;
+
+		setTimeout(function () {
+				window.location.href = "sources.html";
+		}, 1550);
+	}
+
+	function readmore () {
+
+		if (expanded == 0) {
+
+			var br = document.createElement("BR");
+			br.setAttribute("id", "deleteBr");
+			document.getElementById('textArea').appendChild(br);
+
+			var whatIsGreen = document.createElement("H4");
+			whatIsGreen.innerHTML = "What Is Greenification?";
+			whatIsGreen.setAttribute("id", "deleteThisSoon");
+
+			document.getElementById('textArea').appendChild(whatIsGreen);
+
+			var whatIsGreenExp = document.createElement("P");
+			whatIsGreenExp.innerHTML = "Greenification is the process of adding or improving so-called <i>greenspaces</i> throughout a city, town, or other community. These greenspaces include parks, forests, gardens and other 'green' areas in a mostly urban or suburban environment. By participating in community service projects to clean up local parks, plant trees, or tend to a community garden, you are helping to 'greenify' Atlanta.";
+			whatIsGreenExp.setAttribute("id", "greenExp");
+
+			document.getElementById('textArea').appendChild(whatIsGreenExp);
+
+			var greenTree = document.createElement("IMG");
+			greenTree.src = "Assets/greenification.png";
+			greenTree.setAttribute("id", "greenTree");
+
+			document.getElementById('textArea').appendChild(greenTree);
+
+			var brThree = document.createElement("BR");
+			brThree.setAttribute("id", "deleteBrThree");
+			document.getElementById('textArea').appendChild(brThree);			
+
+			var whyGreen = document.createElement("H4");
+			whyGreen.innerHTML = "Why Greenify?";
+			whyGreen.setAttribute("id", "deleteThisSoonTwo");
+
+			document.getElementById('textArea').appendChild(whyGreen);
+
+			var whyGreenExp = document.createElement("P");
+			whyGreenExp.innerHTML = "In addition to helping to make Atlanta the beautiful city it is, greenspaces provide the city and its residents with a wealth of other health, safety and aesthetic benefits. Most importantly, greenspaces help to maintain a livable air quality throughout the city. The oxygen surplus from greenspaces is such that a signle newly planted tree can filter out over 11,000 miles of CO<sub>2</sub> emissions from the surrounding air during the tree's lifetime (&quot;Environmental Benefits&quot;). On top of that, studies have shown that proximity to (and use of) parks and greenspaces can increase productivity and decrease depression (Wolf and Flora). Finally, greespaces among urban environments often lead to increased social empowerment while leading to lower crime rates (&quot;Adequate Open&quot;). (<a onclick='goToSources()' id='greenFact'>Sources</a>)";
+			whyGreenExp.setAttribute("id", "whyGreenExp");
+
+			document.getElementById('textArea').appendChild(whyGreenExp);
+
+			var carEmissions = document.createElement("IMG");
+			carEmissions.src = "Assets/CarEmissions.png";
+			carEmissions.setAttribute("id", "carEmissions");
+
+			document.getElementById('textArea').appendChild(carEmissions);
+
+
+			var brFour = document.createElement("BR");
+			brFour.setAttribute("id", "deleteBrFour");
+			document.getElementById('textArea').appendChild(brFour);	
+
+
+			var whatWeDo = document.createElement("H4");
+			whatWeDo.innerHTML = "What We Do";
+			whatWeDo.setAttribute("id", "deleteThisSoonThree");
+
+			document.getElementById('textArea').appendChild(whatWeDo);
+
+			var whatExp = document.createElement("P");
+			whatExp.innerHTML = "We at greenATL, Inc. fully believe in the power and benefits of greenspace, and want to empower our fellow Atlantans to get out, get active and help to <i>greenify Atlanta</i>. greenATL helps to connect passionate citizens with local non-profits to organize volunteer opportunities to improve the quality of and access to Atlanta's greenspaces.";
+			whatExp.setAttribute("id", "whatExp");
+
+			document.getElementById('textArea').appendChild(whatExp);
+
+			var greenLeaf = document.createElement("IMG");
+			greenLeaf.src = "Assets/greenLeaf.png";
+			greenLeaf.setAttribute("id", "greenLeaf");
+
+			document.getElementById('textArea').appendChild(greenLeaf);
+
+			var brTwo = document.createElement("BR");
+			brTwo.setAttribute("id", "deleteBrTwo");
+			document.getElementById('textArea').appendChild(brTwo);
+
+
+		document.getElementById('readMore').innerHTML = "Collapse";
+
+			expanded = 1;
+	} else if (expanded == 1) {
+
+			var child = document.getElementById("deleteBrTwo");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("greenLeaf");
+			document.getElementById('textArea').removeChild(child);
+
+			var child = document.getElementById("whatExp");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("deleteThisSoonThree");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("deleteBrFour");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("carEmissions");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("whyGreenExp");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("deleteThisSoonTwo");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("deleteBrThree");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("greenTree");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("greenExp");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("deleteThisSoon");
+			document.getElementById('textArea').removeChild(child);
+
+			child = document.getElementById("deleteBr");
+			document.getElementById('textArea').removeChild(child);
+
+		document.getElementById('readMore').innerHTML = "Read More";
+
+			expanded = 0;
+
+			window.location.href = "#aboutUs";
+	}
+	}
+		 
+	</script>
+
+</head>
+<body id="top" onload="startFunc()" onscroll="scrollOpacity()">
+	<div id="trulyTheEntirePage">
+	<div class="entirePage" id="entirePage">
+	<div id="imageContainer">
+		<img src="Assets/greenATL.png" id="greenLogo"/>
+	</div>
+	<div id="headerContainer">
+		<table id="headerTableOne">
+			<tr>
+				<td>
+					<a href="#top" id="toHome">Home</a>
+				</td>
+				<td>
+					<a href="#anchorForProjects" id="toProjects">Our Projects</a>
+				</td>
+			</tr>
+		</table>
+		<table id="headerTableTwo">
+			<tr>
+				<td>
+					<a href="#anchorForInvolved" id="toInvolved">Get Involved</a>
+				</td>
+				<td>
+					<a href="#toFollowUs" id="toContact">Contact Us</a>
+				</td>
+			</tr>
+		</table>	
+	</div>
+
+
+	<div id="containerForStuff">
+		<h2>Together, let's make Atlanta green!</h2>
+		<br />
+		<br />
+		<iframe id="video" src="https://www.youtube.com/embed/5Gtatb0pf1E" frameborder="0" allowfullscreen></iframe>
+	
+
+		<div class="textContainer">
+		<p class="colorText"><i>Watch our Campaign Video to learn about greenATL!</i></p>
+		<br />
+		<h2 id="aboutUs">About Us</h2>
+		<div id="textArea">
+		<p class="colorText" id="aboutText">greenATL is a non-profit organization that advocates for the greenification of Atlanta through public service projects such as Atlanta Park clean-ups, tree planting projects, and advocacy work throughout Atlanta. We work to engage young Atlantans in the betterment of their city and help to connect passionate citizens with other Atlanta-Area non-profits also working to greenify the city...</p>
+		</div>
+		<h3 onclick="readmore()" id="readMore">Read More</h3>
+		<br />
+		<hr color="#134611"/>
+		<br />
+		<h2 id="anchorForProjects">Our Projects</h2>
+		<br />
+		</div>
+
+
+		<div id="projectText">
+		<table id="projectTable">
+			<tbody>
+				<tr>
+					<td>
+						<div id="divOne">
+						<img src="Assets/Photos/21.png" id="getThisHeight" class="projectPlaceholder" onclick="goToNextPage(1)"/>
+						<h2 id="theBeltline" class="textForImage">THE BELTLINE</h2>
+						</div>
+					</td>
+					<td>
+						<div id="divTwo">
+						<img src="Assets/Photos/2.png" id="getThisHeightTwo" class="projectPlaceholder" onclick="goToNextPage(2)"/>
+						<h2 id="Midtown" class="textForImage">MIDTOWN</h2>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="divThree">
+						<img src="Assets/Buckhead.png" id="getThisHeightThree" class="projectPlaceholder" onclick="goToNextPage(3)"/>
+						<h2 id="Buckhead" class="textForImage">BUCKHEAD</h2>
+						</div>
+					</td>
+					<td>
+						<div id="divFour">
+						<img src="Assets/Photos/28.png" id="getThisHeightFour" class="projectPlaceholder" onclick="goToNextPage(4)"/>
+						<h2 id="yourNeighborhood" class="textForImage">YOUR NEIGHBORHOOD</h2>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+
+		</div>
+
+		<div id="containerForStuff">
+			
+		<br />
+		<div class="textContainer" id="moveThisDownTwo">
+			<hr color="#134611"/>
+			<br />
+			<h2 id="anchorForInvolved">Get Involved</h2>
+			<br />	
+			<h4>Atlanta's greenification starts with you!</h4>
+			<p class="colorText">We need passionate citizens who are willing to give a little of their time to help clean up and greenify Atlanta -- It only takes one weekend afternoon or one stroll in the park to make a difference!</p>
+			<br />
+			<h4>Here are some ways you can have an impact:</h4>
+				<p class="colorText">&#149; Volunteer your time with a Park Conservancy or a Park Restoration Organization. <a href="http://www.piedmontpark.org/conservancy/mission.html" class="parkLinks" target="_blank">The Piedmont Park Conservancy</a> and <a href="https://treesatlanta.org/" class="parkLinks" target="_blank"><i>Trees Atlanta</i></a> offer volunteer opportunities for all ages so anyone can get out and <i>make Atlanta green</i>!</p>
+				<p class="colorText">&#149; Support your local park by donating to the Park. You can donate to <a href="http://chastainparkconservancy.org/" target="_blank" class="parkLinks">Chastain Park</a>, <a href="http://atlmemorialpark.org/" class="parkLinks" target="_blank">Atlanta Memorial Park</a>, or <a href="http://www.piedmontpark.org/conservancy/mission.html" class="parkLinks" target="_blank">Piedmont Park</a> through their respective Park Conversancy Organizations</p>
+				<p class="colorText">&#149; Attend Community Planning Meetings to advocate for increased greenspace and parkspace in your Neighborhood. Organizations such as <a href="https://buckheadredefined.com/" class="parkLinks" target="_blank"><i>Buckhead Redefined</i></a> and <a href="http://www.midtownatl.com/" class="parkLinks" target="_blank"><i>The Midtown Alliance</i></a> are great for getting involved in your community and advocating for its greenification</p>
+				<p class="colorText">&#149; Plant trees in your neighborhood or in your backyard to get started <i>making Atlanta green</i> on your own or with your local community</p>
+				<p class="colorText">&#149; Pick up trash while in a Park or on the Beltline - Atlanta's greenification starts with clean parks</p>
+				<p class="colorText">&#149; Share this website and our campaign video with your friends on social media to spread awareness about Atlanta greenspaces and Atlanta' greenification!</p>
+			<br />
+			<br />
+			<hr color="#134611"/>
+			<br />
+			<h2 id="toFollowUs">Follow Us</h2>	
+			<br />
+		<table id="socialTable">
+			<tr>
+				<td class="socialTableTD">
+					<a href="https://instagram.com/green.atl/" target="_blank"><img src="Assets/Instagram.png"/></a>
+				</td>
+				<td class="socialTableTD">
+					<a href="https://twitter.com/green_atl" target="_blank"><img src="Assets/Twitter.png"/></a>
+				</td>
+				<td class="socialTableTD">
+					<a onclick="goToNextPage(5)"><img src="Assets/Snapchat.png"/></a>
+				</td>
+			</tr>
+		</table>
+			<br />
+			<br />
+			<p class="colorText">For general inquiries and/or to find out more about how you can <i>make Atlanta green</i>, email us at atl@greenatl.org</p>	
+			<br />
+			<br />
+			<hr color="#134611"/>
+			<br />
+			<h2>Acknowledgements</h2>
+			<br />
+			<p color="colorText">Copyright &copy; 2017. greenATL, Inc. All rights reserved. Social Media icon designs are the intellectual property of Instagram, LLC, Twitter, Inc., and Snapchat, Inc., respectively.</p>
+			<p color="colorText">Special thanks to Ms. Nicole O'Brien, Ms. Joyce Pereira and The AIS Design Department.</p>
+		</div>
+			
+			
+		
+	</div>
+
+	<div class="footer">
+			<img src="Assets/Skyline3.png" id="skyline"/>
+
+		</div>
+
+	<div id="scrollFooter">
+		<a onclick="scrollToBottom()" class="noSelect"><img src="Assets/ArrowDown.png" id="arrowDown" class="noSelect"/></a>
+	</div>
+	</div>
+
+	<div id="moveThisDown">
+			<table id="footerWebsite">
+			<tr>
+				<td>
+					<a id="websiteBy" class="footerText">Website by James Weichert</a>
+				</td>
+			</tr>
+			</table>
+
+			<table id="footerLinks">
+			<tr>
+				<td>
+					<a href="#top" id="linksToHome" class="footerText">To Top</a>
+				</td>
+				<td>
+					<a href="#anchorForProjects" id="linksToProjects" class="footerText">Our Projects</a>
+				</td>
+				<td>
+					<a href="#anchorForInvolved" id="linksToInvolved" class="footerText">Get Involved</a>
+				</td>
+				<td>
+					<a href="#toFollowUs" id="linksToContact" class="footerText">Contact Us</a>
+				</td>
+			</tr>
+			</table>
+
+			<table id="footerCopy">
+			<tr>
+				<td>
+					<a id="copyright" class="footerText">Copyright &copy; 2017. greenATL Inc.</a>
+				</td>
+			</tr>
+			</table>
+			</div>
+
+		</div>
+</body>
+</html>

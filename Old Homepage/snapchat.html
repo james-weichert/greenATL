@@ -1,0 +1,91 @@
+<!Doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>greenATL - Coming Soon</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+	<style type="text/css">
+		@font-face {
+    			font-family: 'GillSansPro';
+    			src: url('GillSans.woff2') format('woff2'),
+         			url('GillSans.woff') format('woff');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+
+			body {
+				font-family: "Trebuchet MS", 'GillSansPro', "Source Sans Pro", Verdana, Sans-serif;
+
+				overflow-x: hidden;
+				overflow-y: hidden;
+
+				transition: opacity 1.5s ease;
+	-webkit-transition: opacity 1.5s ease;
+    -moz-transition: opacity 1.5s ease;
+    -o-transition: opacity 1.5s ease;
+
+			}
+			div {
+				text-align: center;
+			}
+			#comingSoonDiv {
+				margin-top: 90vh;
+			}
+			h1 {
+				color: #96E072;
+				font-size: 2em;
+			}
+			a {
+				text-decoration: none;
+			}
+		#SnapchatLink {
+			width: 35vw;
+			position: absolute;
+			left: 50%;
+			margin-left: -17.5vw;
+			top: 0;
+			margin-top: 10vh;
+			opacity: 0;
+			transition: opacity 3s ease;
+	-webkit-transition: opacity 3s ease;
+    -moz-transition: opacity 3s ease;
+    -o-transition: opacity 3s ease;
+		}
+		#comingSoonDiv {
+			opacity: 0;
+			transition: opacity 3s ease;
+	-webkit-transition: opacity 3s ease;
+    -moz-transition: opacity 3s ease;
+    -o-transition: opacity 3s ease;
+
+		}
+		a { cursor: pointer; cursor: hand; }
+
+	</style>
+	<script type="text/javascript">
+		function runThisScript () {
+			setTimeout(function () {
+				document.getElementById('SnapchatLink').style.opacity = 1;
+				setTimeout(function () {
+					document.getElementById('comingSoonDiv').style.opacity = 1;
+				}, 500);
+			}, 500);
+		}
+
+		function switchToSnap () {
+			document.body.style.opacity = 0;
+
+			setTimeout(function () {
+				window.location.href = "index.html";
+			}, 1500);
+		}
+	</script>
+</head>
+<body onload="runThisScript()">
+	<img src="SnapchatLink.png" id="SnapchatLink"/>
+	<div id="comingSoonDiv">
+		<a onclick="switchToSnap()"><h1><i>Back</i></h1></a>
+	</div>
+</body>
+</html>

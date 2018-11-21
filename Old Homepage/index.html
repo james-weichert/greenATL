@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>greenATL - Coming Soon</title>
+	 
+
+	<style type="text/css">
+		@font-face {
+    			font-family: 'GillSansPro';
+    			src: url('GillSans.woff2') format('woff2'),
+         			url('GillSans.woff') format('woff');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+
+			body {
+				font-family: "Trebuchet MS", 'GillSansPro', "Source Sans Pro", Verdana, Sans-serif;
+
+				overflow-x: hidden;
+				overflow-y: hidden;
+
+
+				transition: opacity 1.5s ease;
+	-webkit-transition: opacity 1.5s ease;
+    -moz-transition: opacity 1.5s ease;
+    -o-transition: opacity 1.5s ease;
+			}
+			div {
+				text-align: center;
+			}
+			#comingSoonDiv {
+				margin-top: 70vh;
+			}
+			h1 {
+				color: #96E072;
+				font-size: 3em;
+			}
+		#greenATL {
+			width: 35vw;
+			position: absolute;
+			left: 50%;
+			margin-left: -17.5vw;
+			top: 0;
+			margin-top: 10vh;
+			opacity: 0;
+			transition: opacity 3s ease;
+	-webkit-transition: opacity 3s ease;
+    -moz-transition: opacity 3s ease;
+    -o-transition: opacity 3s ease;
+		}
+		#comingSoonDiv {
+			opacity: 0;
+			transition: opacity 3s ease;
+	-webkit-transition: opacity 3s ease;
+    -moz-transition: opacity 3s ease;
+    -o-transition: opacity 3s ease;
+
+		}
+
+		td img {
+			width: 4vw;
+		}
+		table {
+			border-spacing: 5vw 0vw;
+		}
+		table {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		a { cursor: pointer; cursor: hand; }
+	</style>
+	<script type="text/javascript">
+		function runThisScript () {
+			setTimeout(function () {
+				document.getElementById('greenATL').style.opacity = 1;
+				setTimeout(function () {
+					document.getElementById('comingSoonDiv').style.opacity = 1;
+				}, 500);
+			}, 500);
+		}
+
+		function switchToSnap () {
+			document.body.style.opacity = 0;
+
+			setTimeout(function () {
+				window.location.href = "snapchat.html";
+			}, 1500);
+		}
+	</script>
+</head>
+<body onload="runThisScript()">
+	<img src="greenATL.png" id="greenATL"/>
+	<div id="comingSoonDiv">
+		<h1><i>Coming Soon</i></h1>
+		<table>
+			<tr>
+				<td>
+					<a href="https://instagram.com/green.atl/"><img src="Instagram.png"/></a>
+				</td>
+				<td>
+					<a href="https://twitter.com/green_atl"><img src="Twitter.png"/></a>
+				</td>
+				<td>
+					<a onclick="switchToSnap()"><img src="Snapchat.png"/></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
